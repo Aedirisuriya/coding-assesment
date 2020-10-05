@@ -1,0 +1,44 @@
+<h1>User Details</h1>
+<div class="container" *ngIf="userDetail">
+	<div>
+
+		<ul class="detail-list">
+			<li>
+				<picture>
+					<img src="{{userDetail.avatar_url}}" alt="avatar" class="avatar">
+      </picture>
+			</li>
+			<li>
+				<div>
+					<span> {{userDetail.name ||  userDetail.login}}</span>
+				</div>
+			</li>
+		</ul>
+
+
+		<h3>Repos</h3>
+		<ul  *ngFor="let repo of repos">
+			<li>
+				<span> {{repo.full_name}}</span>
+			</li>
+		</ul>
+
+		<h3>Followers</h3>
+		<div class="followers">
+			<ul class="detail-list" *ngFor="let follower of followers">
+				<li>
+					<picture>
+						<img src="{{follower.avatar_url}}" alt="avatar" class="avatar">
+      </picture>
+				</li>
+				<li>
+					<div>
+						<span>{{follower.login}}</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+</div>

@@ -1,0 +1,23 @@
+.avatar {
+  width:150px;
+  height:150px;
+}
+
+.detail-list {
+  list-style: none;
+  display: flex;
+}
+
+.detail-list li {
+  padding: 10px;
+}
+
+.detail-list li.detail-item {
+  min-width: 100px;
+  display: inline-block;
+}
+
+.followers {
+  display: flex;
+  flex-wrap: wrap;
+}

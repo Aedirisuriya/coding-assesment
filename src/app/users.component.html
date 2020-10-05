@@ -1,0 +1,23 @@
+<h1>Users</h1>
+<div>
+	<input type="text" placeholder="search" (keyup)="onSearch($event)" class="search-control"/>
+</div>
+	<div class="container" #scrollContainer>
+		<div *ngFor="let user of users">
+			<a routerLink="/users/{{user.login}}">
+				<ul class="detail-list">
+					<li>
+						<picture>
+							<img src="{{user.avatar_url}}" alt="avatar" class="avatar">
+      </picture>
+					</li>
+					<li>
+						<div>
+				      <span> {{user.login}}</span>
+						</div>
+					</li>
+				</ul>
+			</a>
+		</div>
+		<div *ngIf="timerId">Loading...</div>
+	</div>

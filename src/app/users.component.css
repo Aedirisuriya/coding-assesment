@@ -1,0 +1,18 @@
+.avatar {
+  width:150px;
+  height:150px;
+}
+
+.detail-list {
+  list-style: none;
+  display: flex;
+}
+
+.detail-list li {
+  padding: 10px;
+}
+
+.search-control {
+  width: 100%;
+  padding: 15px 5px;
+}
